@@ -3,790 +3,574 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Templo Consulting · Inmobiliaria Premium Pozuelo de Alarcón</title>
-<meta name="description" content="Inmobiliaria de alto standing en Pozuelo de Alarcón y Madrid Noroeste. Compra, venta y gestión de patrimonio inmobiliario de lujo.">
+<title>Templo Consulting — Inmobiliaria · Madrid</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700;800;900&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
   :root {
-    --negro: #111111;
-    --blanco: #FFFFFF;
-    --terracota: #C4643C;
-    --terracota-oscuro: #A8532E;
-    --salvia: #6B8C6A;
-    --gris: #888888;
-    --gris-claro: #F0EDE8;
-    --gris-medio: #CCCCCC;
+    --black: #111111;
+    --white: #FFFFFF;
+    --terracota: #C0614E;
+    --terracota-dark: #A04A38;
+    --sage: #6B8C6E;
+    --sage-light: #A8C5AB;
+    --light-gray: #F8F7F5;
+    --gray: #888;
+    --border: #E0DDD8;
+    --dark-gray: #333;
   }
-
   html { scroll-behavior: smooth; }
-
-  body {
-    font-family: 'Open Sans', sans-serif;
-    color: var(--negro);
-    background: var(--blanco);
-    line-height: 1.7;
-  }
+  body { font-family: 'Open Sans', sans-serif; color: var(--black); background: var(--white); }
 
   /* NAV */
   nav {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 100;
-    background: rgba(17,17,17,0.97);
-    backdrop-filter: blur(8px);
-    padding: 0 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 70px;
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(17,17,17,0.97); backdrop-filter: blur(10px);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 6%; height: 72px;
   }
-  .nav-logo {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    text-decoration: none;
+  .nav-logo { display: flex; align-items: center; gap: 0.8rem; }
+  .nav-logo-mark {
+    width: 38px; height: 38px; border: 1.5px solid var(--terracota);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Raleway', sans-serif; font-weight: 900; color: var(--terracota); font-size: 1rem;
   }
-  .nav-logo-icon {
-    width: 36px;
-    height: 36px;
-    border: 1.5px solid var(--terracota);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--terracota);
-  }
-  .nav-logo-text {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 700;
-    font-size: 1.1rem;
-    color: var(--blanco);
-    letter-spacing: 0.08em;
-  }
-  .nav-links {
-    display: flex;
-    gap: 2.5rem;
-    list-style: none;
-  }
-  .nav-links a {
-    color: rgba(255,255,255,0.7);
-    text-decoration: none;
-    font-size: 0.82rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    font-family: 'Raleway', sans-serif;
-    transition: color 0.3s;
-  }
+  .nav-logo-text { font-family: 'Raleway', sans-serif; color: white; font-weight: 800; font-size: 1.1rem; letter-spacing: 0.05em; text-transform: uppercase; }
+  .nav-logo-sub { font-size: 0.6rem; color: rgba(255,255,255,0.4); letter-spacing: 0.15em; text-transform: uppercase; display: block; }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a { color: rgba(255,255,255,0.65); text-decoration: none; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; transition: color 0.2s; }
   .nav-links a:hover { color: var(--terracota); }
   .nav-cta {
-    background: var(--terracota) !important;
-    color: var(--blanco) !important;
-    padding: 0.5rem 1.3rem;
+    background: var(--terracota); color: white; padding: 0.55rem 1.4rem;
+    font-family: 'Raleway', sans-serif; font-weight: 700; font-size: 0.78rem;
+    letter-spacing: 0.1em; text-transform: uppercase; border: none;
+    cursor: pointer; transition: background 0.2s, transform 0.15s;
+    text-decoration: none; display: inline-block;
   }
-  .nav-cta:hover { background: var(--terracota-oscuro) !important; }
+  .nav-cta:hover { background: var(--terracota-dark); transform: translateY(-1px); }
 
   /* HERO */
   .hero {
-    min-height: 100vh;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding-top: 70px;
-    overflow: hidden;
+    min-height: 100vh; background: var(--black);
+    display: grid; position: relative; overflow: hidden;
+    padding-top: 72px;
   }
-  .hero-bg {
-    position: absolute;
-    inset: 0;
-    background-image: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1600&q=80&auto=format&fit=crop');
-    background-size: cover;
-    background-position: center;
-    filter: brightness(0.4);
-    transition: transform 8s ease;
+  .hero-grid {
+    display: grid; grid-template-columns: 1fr 1fr; min-height: calc(100vh - 72px);
   }
-  .hero-content {
-    position: relative;
-    z-index: 1;
-    padding: 0 3rem 5rem;
-    max-width: 800px;
+  .hero-left {
+    padding: 80px 4% 80px 6%; display: flex; flex-direction: column;
+    justify-content: center; position: relative; z-index: 2;
   }
-  .hero-label {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.8rem;
-    font-family: 'Raleway', sans-serif;
-    font-size: 0.72rem;
-    letter-spacing: 0.3em;
+  .hero-tag {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    border: 1px solid rgba(192,97,78,0.4); color: var(--terracota);
+    padding: 0.35rem 0.9rem; font-family: 'Raleway', sans-serif;
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em;
+    text-transform: uppercase; margin-bottom: 2rem; width: fit-content;
+  }
+  .hero-left h1 {
+    font-family: 'Raleway', sans-serif; font-weight: 900;
+    font-size: clamp(2.4rem, 4vw, 3.8rem); color: white;
+    line-height: 1.1; margin-bottom: 1.5rem; letter-spacing: -0.02em;
     text-transform: uppercase;
-    color: var(--terracota);
-    margin-bottom: 1.5rem;
   }
-  .hero-label::before {
-    content: '';
-    display: block;
-    width: 30px;
-    height: 1px;
-    background: var(--terracota);
+  .hero-left h1 span { color: var(--terracota); }
+  .hero-left p { font-size: 0.95rem; color: rgba(255,255,255,0.6); line-height: 1.8; margin-bottom: 2.5rem; max-width: 440px; font-weight: 300; }
+  .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3rem; }
+  .btn-terracota {
+    background: var(--terracota); color: white; padding: 0.95rem 2.2rem;
+    font-family: 'Raleway', sans-serif; font-weight: 700; font-size: 0.85rem;
+    letter-spacing: 0.1em; text-transform: uppercase; border: none;
+    cursor: pointer; transition: background 0.2s, transform 0.15s;
+    text-decoration: none; display: inline-block;
   }
-  .hero h1 {
-    font-family: 'Raleway', sans-serif;
-    font-size: clamp(2.8rem, 5vw, 5rem);
-    font-weight: 800;
-    color: var(--blanco);
-    line-height: 1.05;
-    margin-bottom: 1.5rem;
-    letter-spacing: -0.02em;
-  }
-  .hero h1 span { color: var(--terracota); }
-  .hero-sub {
-    color: rgba(255,255,255,0.65);
-    font-size: 1.05rem;
-    font-weight: 300;
-    max-width: 520px;
-    margin-bottom: 2.5rem;
-  }
-  .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
-  .btn-primary {
-    background: var(--terracota);
-    color: var(--blanco);
-    padding: 0.9rem 2rem;
-    text-decoration: none;
-    font-family: 'Raleway', sans-serif;
-    font-size: 0.82rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    transition: background 0.3s;
-  }
-  .btn-primary:hover { background: var(--terracota-oscuro); }
+  .btn-terracota:hover { background: var(--terracota-dark); transform: translateY(-2px); }
   .btn-outline-white {
-    border: 1px solid rgba(255,255,255,0.4);
-    color: var(--blanco);
-    padding: 0.9rem 2rem;
-    text-decoration: none;
-    font-family: 'Raleway', sans-serif;
-    font-size: 0.82rem;
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    transition: border-color 0.3s, background 0.3s;
+    background: transparent; color: white; padding: 0.95rem 2.2rem;
+    border: 1px solid rgba(255,255,255,0.3); font-family: 'Raleway', sans-serif;
+    font-weight: 700; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase;
+    cursor: pointer; transition: all 0.25s; text-decoration: none; display: inline-block;
   }
-  .btn-outline-white:hover { border-color: var(--terracota); background: rgba(196,100,60,0.1); }
-  .hero-stats {
-    position: absolute;
-    right: 3rem;
-    bottom: 5rem;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+  .btn-outline-white:hover { border-color: var(--terracota); color: var(--terracota); }
+  .hero-value-pill {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    background: rgba(107,140,110,0.2); border: 1px solid rgba(107,140,110,0.4);
+    padding: 0.6rem 1.2rem; color: var(--sage-light); font-size: 0.82rem; font-weight: 600;
+    width: fit-content;
   }
-  .hero-stat { text-align: right; }
-  .hero-stat-num {
-    font-family: 'Raleway', sans-serif;
-    font-size: 2.2rem;
-    font-weight: 800;
-    color: var(--blanco);
-    line-height: 1;
-  }
-  .hero-stat-label {
-    font-size: 0.7rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.5);
-    margin-top: 0.2rem;
-  }
+  .hero-value-pill svg { width: 14px; height: 14px; stroke: var(--sage-light); fill: none; stroke-width: 2; }
 
-  /* PROPIEDADES */
-  .propiedades { background: var(--gris-claro); padding: 5.5rem 3rem; }
-  .container { max-width: 1200px; margin: 0 auto; }
-  .section-header { margin-bottom: 3rem; }
-  .section-label-line {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 0.8rem;
+  .hero-right { background: #1A1A1A; position: relative; overflow: hidden; display: flex; flex-direction: column; }
+  .hero-visual-grid { flex: 1; display: grid; grid-template-rows: 1fr 1fr; }
+  .hero-visual-top {
+    background: #222; display: flex; align-items: center; justify-content: center;
+    border-bottom: 1px solid #333; position: relative; overflow: hidden;
   }
-  .section-label-line::before {
-    content: '';
-    display: block;
-    width: 30px;
-    height: 1.5px;
-    background: var(--terracota);
+  .hero-visual-top::before {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(192,97,78,0.08) 0%, transparent 60%);
   }
-  .section-label-text {
-    font-family: 'Raleway', sans-serif;
-    font-size: 0.72rem;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    color: var(--terracota);
+  .hero-visual-top svg { width: 60px; height: 60px; stroke: rgba(192,97,78,0.3); fill: none; stroke-width: 0.8; }
+  .hero-visual-bottom { display: grid; grid-template-columns: 1fr 1fr; }
+  .hero-visual-cell {
+    background: #1E1E1E; display: flex; align-items: center; justify-content: center;
+    border: 1px solid #2A2A2A; transition: background 0.3s;
   }
-  .section-title {
-    font-family: 'Raleway', sans-serif;
-    font-size: clamp(1.8rem, 2.5vw, 2.6rem);
-    font-weight: 800;
-    color: var(--negro);
-    line-height: 1.15;
-    letter-spacing: -0.01em;
+  .hero-visual-cell:hover { background: #252525; }
+  .hero-visual-cell svg { width: 40px; height: 40px; stroke: rgba(107,140,110,0.3); fill: none; stroke-width: 0.8; }
+  .hero-stats-bar {
+    background: #0D0D0D; padding: 1.5rem 2rem;
+    display: flex; gap: 2rem; justify-content: space-around;
   }
-  .prop-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-  }
-  .prop-card {
-    background: var(--blanco);
-    overflow: hidden;
-    transition: transform 0.3s;
-  }
-  .prop-card:hover { transform: translateY(-4px); }
-  .prop-img {
-    position: relative;
-    height: 240px;
-    overflow: hidden;
-  }
-  .prop-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.6s ease;
-  }
-  .prop-card:hover .prop-img img { transform: scale(1.05); }
-  .prop-badge {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    background: var(--terracota);
-    color: var(--blanco);
-    padding: 0.25rem 0.7rem;
-    font-family: 'Raleway', sans-serif;
-    font-size: 0.72rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    font-weight: 700;
-  }
-  .prop-info { padding: 1.5rem; }
-  .prop-price {
-    font-family: 'Raleway', sans-serif;
-    font-size: 1.3rem;
-    font-weight: 800;
-    color: var(--negro);
-    margin-bottom: 0.3rem;
-  }
-  .prop-title {
-    font-weight: 600;
-    font-size: 0.95rem;
-    margin-bottom: 0.4rem;
-  }
-  .prop-location {
-    color: var(--gris);
-    font-size: 0.82rem;
-    display: flex;
-    align-items: center;
-    gap: 0.3rem;
-    margin-bottom: 1rem;
-  }
-  .prop-features {
-    display: flex;
-    gap: 1.2rem;
-    padding-top: 1rem;
-    border-top: 1px solid var(--gris-claro);
-  }
-  .prop-feature {
-    color: var(--gris);
-    font-size: 0.8rem;
-    display: flex;
-    align-items: center;
-    gap: 0.3rem;
-  }
+  .hstat { text-align: center; }
+  .hstat strong { font-family: 'Raleway', sans-serif; display: block; font-size: 1.5rem; font-weight: 900; color: var(--terracota); }
+  .hstat span { font-size: 0.7rem; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 0.08em; }
 
-  /* SERVICIOS */
-  .servicios { background: var(--negro); padding: 5.5rem 3rem; }
-  .servicios .section-title { color: var(--blanco); }
-  .servicios .section-label-text { color: var(--terracota); }
-  .servicios .section-label-line::before { background: var(--terracota); }
-  .servicios-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 2px;
-    margin-top: 3.5rem;
-    background: rgba(255,255,255,0.05);
-  }
-  .servicio-item {
-    background: var(--negro);
-    padding: 2.5rem;
-    border: 1px solid rgba(255,255,255,0.05);
-    transition: background 0.3s, border-color 0.3s;
-  }
-  .servicio-item:hover { background: var(--terracota); border-color: var(--terracota); }
-  .servicio-item:hover .servicio-icon,
-  .servicio-item:hover .servicio-title,
-  .servicio-item:hover .servicio-desc { color: var(--blanco); }
-  .servicio-icon { color: var(--terracota); margin-bottom: 1.2rem; transition: color 0.3s; }
-  .servicio-title { font-family: 'Raleway', sans-serif; font-weight: 700; color: var(--blanco); font-size: 1rem; margin-bottom: 0.5rem; transition: color 0.3s; }
-  .servicio-desc { color: rgba(255,255,255,0.5); font-size: 0.85rem; transition: color 0.3s; }
+  /* WHY */
+  .why { background: var(--white); }
+  .why-header { margin-bottom: 4rem; }
+  .section-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--terracota); margin-bottom: 0.6rem; }
+  .section-title { font-family: 'Raleway', sans-serif; font-weight: 900; font-size: clamp(1.8rem, 3vw, 2.6rem); color: var(--black); line-height: 1.1; letter-spacing: -0.02em; text-transform: uppercase; margin-bottom: 0.8rem; }
+  .section-sub { font-size: 0.95rem; color: var(--gray); line-height: 1.8; max-width: 520px; font-weight: 300; }
+  section { padding: 100px 6%; }
 
-  /* PROCESO */
-  .proceso { background: var(--gris-claro); padding: 5.5rem 3rem; }
-  .proceso-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
-    margin-top: 3.5rem;
+  .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2px; background: var(--border); }
+  .why-card {
+    background: var(--light-gray); padding: 2.5rem;
+    border-bottom: 3px solid transparent; transition: border-color 0.25s, background 0.25s;
   }
-  .proceso-step { position: relative; }
-  .proceso-step:not(:last-child)::after {
-    content: '';
-    position: absolute;
-    top: 1.5rem;
-    right: -1rem;
-    width: 2rem;
-    height: 1px;
-    background: var(--gris-medio);
-  }
-  .paso-icon {
-    width: 3rem;
-    height: 3rem;
-    border: 1.5px solid var(--terracota);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--terracota);
-    margin-bottom: 1.2rem;
-  }
-  .paso-num {
-    font-family: 'Raleway', sans-serif;
-    font-size: 0.7rem;
-    letter-spacing: 0.2em;
-    color: var(--gris);
-    text-transform: uppercase;
-    margin-bottom: 0.3rem;
-  }
-  .paso-title {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 700;
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-  }
-  .paso-desc { color: var(--gris); font-size: 0.85rem; }
+  .why-card:hover { border-bottom-color: var(--terracota); background: white; }
+  .why-icon { margin-bottom: 1.5rem; }
+  .why-icon svg { width: 28px; height: 28px; stroke: var(--terracota); fill: none; stroke-width: 1.5; }
+  .why-card h3 { font-family: 'Raleway', sans-serif; font-weight: 800; font-size: 1rem; color: var(--black); margin-bottom: 0.6rem; text-transform: uppercase; letter-spacing: 0.03em; }
+  .why-card p { font-size: 0.88rem; color: var(--gray); line-height: 1.7; font-weight: 300; }
 
-  /* CTA VALORA */
-  .valora {
-    background: var(--terracota);
-    padding: 4rem 3rem;
-    text-align: center;
+  /* FLAT FEE */
+  .flat-fee { background: var(--black); }
+  .flat-fee-inner { max-width: 960px; margin: 0 auto; }
+  .flat-fee-header { text-align: center; margin-bottom: 3.5rem; }
+  .flat-fee-header .section-title { color: white; }
+  .flat-fee-header .section-sub { margin: 0.8rem auto 0; color: rgba(255,255,255,0.5); }
+  .pricing-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5px; background: rgba(255,255,255,0.05); }
+  .pricing-card { background: #1A1A1A; padding: 2.5rem; position: relative; overflow: hidden; }
+  .pricing-card.featured { background: var(--terracota); }
+  .pricing-card.featured::before { content: 'MÁS POPULAR'; position: absolute; top: 1rem; right: 1rem; font-family: 'Raleway', sans-serif; font-size: 0.65rem; font-weight: 900; letter-spacing: 0.12em; color: rgba(255,255,255,0.7); }
+  .pricing-tier { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 0.5rem; }
+  .pricing-card.featured .pricing-tier { color: rgba(255,255,255,0.8); }
+  .pricing-name { font-family: 'Raleway', sans-serif; font-weight: 900; font-size: 1.2rem; color: white; text-transform: uppercase; margin-bottom: 1.5rem; }
+  .pricing-list { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; margin-bottom: 2rem; }
+  .pricing-list li { display: flex; align-items: center; gap: 0.6rem; font-size: 0.85rem; color: rgba(255,255,255,0.75); }
+  .pricing-list li svg { width: 14px; height: 14px; stroke: var(--sage-light); fill: none; stroke-width: 2; flex-shrink: 0; }
+  .pricing-card.featured .pricing-list li svg { stroke: rgba(255,255,255,0.9); }
+  .pricing-cta {
+    display: block; width: 100%; padding: 0.8rem; text-align: center;
+    font-family: 'Raleway', sans-serif; font-weight: 700; font-size: 0.82rem;
+    letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none;
+    transition: all 0.2s; border: none; cursor: pointer;
   }
-  .valora h2 {
-    font-family: 'Raleway', sans-serif;
-    font-size: clamp(1.8rem, 3vw, 2.8rem);
-    font-weight: 800;
-    color: var(--blanco);
-    margin-bottom: 0.8rem;
-  }
-  .valora p {
-    color: rgba(255,255,255,0.75);
-    font-size: 1.05rem;
-    max-width: 500px;
-    margin: 0 auto 2rem;
-  }
-  .btn-white {
-    display: inline-block;
-    background: var(--blanco);
-    color: var(--terracota);
-    padding: 0.9rem 2.5rem;
-    text-decoration: none;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 800;
-    font-size: 0.85rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    transition: background 0.3s;
-  }
-  .btn-white:hover { background: var(--gris-claro); }
+  .pricing-card:not(.featured) .pricing-cta { background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.7); }
+  .pricing-card:not(.featured) .pricing-cta:hover { background: var(--terracota); color: white; }
+  .pricing-card.featured .pricing-cta { background: rgba(0,0,0,0.3); color: white; }
+  .pricing-card.featured .pricing-cta:hover { background: rgba(0,0,0,0.5); }
 
-  /* CONTACTO */
-  .contacto { background: var(--blanco); padding: 5.5rem 3rem; }
-  .contacto-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 5rem;
+  /* PROCESS */
+  .process { background: var(--light-gray); }
+  .process-header { max-width: 600px; margin-bottom: 4rem; }
+  .process-timeline { display: flex; flex-direction: column; gap: 0; }
+  .pt-item {
+    display: grid; grid-template-columns: 80px 1fr; gap: 2rem;
+    padding: 2rem 0; border-bottom: 1px solid var(--border);
     align-items: start;
   }
-  .info-piece { margin-bottom: 2rem; }
-  .info-piece-label {
-    font-family: 'Raleway', sans-serif;
-    font-size: 0.7rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--gris);
-    margin-bottom: 0.3rem;
+  .pt-item:last-child { border-bottom: none; }
+  .pt-num {
+    font-family: 'Raleway', sans-serif; font-weight: 900; font-size: 3rem;
+    color: var(--border); line-height: 1; text-align: center; padding-top: 0.3rem;
   }
-  .info-piece-value { font-size: 0.97rem; color: var(--negro); }
-  .form-input-group { margin-bottom: 1rem; }
-  .form-input-group label { display: block; font-family: 'Raleway', sans-serif; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gris); margin-bottom: 0.4rem; }
-  .form-input-group input,
-  .form-input-group select,
-  .form-input-group textarea {
-    width: 100%;
-    border: 1.5px solid var(--gris-claro);
-    background: var(--blanco);
-    padding: 0.8rem 1rem;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 0.92rem;
-    color: var(--negro);
-    outline: none;
-    transition: border-color 0.3s;
+  .pt-content h4 { font-family: 'Raleway', sans-serif; font-weight: 800; font-size: 1.05rem; color: var(--black); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 0.5rem; }
+  .pt-content p { font-size: 0.88rem; color: var(--gray); line-height: 1.7; font-weight: 300; }
+  .pt-tag { display: inline-block; margin-top: 0.6rem; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage); }
+
+  /* TESTIMONIALS */
+  .testimonials { background: var(--white); }
+  .testimonials-header { text-align: center; margin-bottom: 3rem; }
+  .testimonials-header .section-sub { margin: 0 auto; }
+  .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+  .t-card { border: 1px solid var(--border); padding: 2rem; border-top: 3px solid var(--terracota); transition: box-shadow 0.25s, transform 0.25s; }
+  .t-card:hover { box-shadow: 0 8px 30px rgba(0,0,0,0.08); transform: translateY(-3px); }
+  .t-stars { display: flex; gap: 3px; margin-bottom: 0.8rem; }
+  .t-stars svg { width: 13px; height: 13px; fill: var(--terracota); }
+  .t-card p { font-size: 0.9rem; color: var(--dark-gray); line-height: 1.7; margin-bottom: 1.2rem; font-style: italic; }
+  .t-name { font-family: 'Raleway', sans-serif; font-weight: 800; font-size: 0.85rem; color: var(--black); text-transform: uppercase; letter-spacing: 0.05em; }
+  .t-detail { font-size: 0.78rem; color: var(--gray); font-weight: 300; }
+
+  /* CONTACT */
+  .contact { background: var(--light-gray); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 5rem; align-items: start; }
+  .contact-info .section-title { margin-bottom: 1.2rem; }
+  .contact-info p { font-size: 0.92rem; color: var(--gray); line-height: 1.8; margin-bottom: 2rem; font-weight: 300; }
+  .contact-details { display: flex; flex-direction: column; gap: 1rem; }
+  .ci { display: flex; align-items: center; gap: 1rem; }
+  .ci-icon { width: 42px; height: 42px; background: var(--black); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .ci-icon svg { width: 18px; height: 18px; stroke: var(--terracota); fill: none; stroke-width: 1.5; }
+  .ci-text strong { display: block; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--terracota); font-weight: 700; }
+  .ci-text span { font-size: 0.9rem; color: var(--dark-gray); font-weight: 300; }
+  .ssl-badge {
+    display: flex; align-items: center; gap: 0.6rem; margin-top: 2rem;
+    padding: 0.8rem 1rem; background: white; border: 1px solid var(--border);
   }
-  .form-input-group input:focus,
-  .form-input-group select:focus,
-  .form-input-group textarea:focus { border-color: var(--terracota); }
-  .form-input-group textarea { height: 110px; resize: vertical; }
+  .ssl-badge svg { width: 18px; height: 18px; stroke: var(--sage); fill: none; stroke-width: 1.5; }
+  .ssl-badge span { font-size: 0.78rem; color: var(--dark-gray); font-weight: 600; }
+  .ssl-badge .ssl-detail { font-size: 0.72rem; color: var(--gray); display: block; font-weight: 300; }
+
+  .contact-form { background: white; padding: 3rem; }
+  .form-title { font-family: 'Raleway', sans-serif; font-weight: 800; font-size: 1.1rem; color: var(--black); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.3rem; }
+  .form-sub { font-size: 0.82rem; color: var(--gray); margin-bottom: 2rem; font-weight: 300; }
+  .form-group { margin-bottom: 1.2rem; }
+  .form-group label { display: block; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--black); margin-bottom: 0.35rem; }
+  .form-group input, .form-group select, .form-group textarea {
+    width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--border);
+    font-family: 'Open Sans', sans-serif; font-size: 0.9rem; color: var(--black);
+    background: var(--light-gray); outline: none; transition: border-color 0.2s; appearance: none;
+  }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--terracota); background: white; }
+  .form-group textarea { height: 80px; resize: vertical; }
   .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-  .btn-form-submit {
-    width: 100%;
-    background: var(--negro);
-    color: var(--blanco);
-    border: none;
-    padding: 1rem;
-    font-family: 'Raleway', sans-serif;
-    font-size: 0.82rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    font-weight: 700;
-    cursor: pointer;
-    transition: background 0.3s;
+  .submit-btn {
+    width: 100%; background: var(--black); color: white; border: none;
+    padding: 0.95rem; font-family: 'Raleway', sans-serif; font-weight: 800;
+    font-size: 0.88rem; letter-spacing: 0.1em; text-transform: uppercase;
+    cursor: pointer; transition: background 0.2s;
   }
-  .btn-form-submit:hover { background: var(--terracota); }
+  .submit-btn:hover { background: var(--terracota); }
 
   /* FOOTER */
-  footer {
-    background: var(--negro);
-    color: rgba(255,255,255,0.45);
-    padding: 2.5rem 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 1rem;
+  footer { background: #0A0A0A; padding: 3rem 6%; }
+  .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; padding-top: 2rem; border-top: 1px solid rgba(192,97,78,0.2); }
+  .footer-logo-area { }
+  .footer-logo-mark-sm {
+    display: inline-flex; align-items: center; gap: 0.6rem;
   }
-  .footer-logo {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 800;
-    font-size: 1.1rem;
-    color: var(--blanco);
-    letter-spacing: 0.1em;
-  }
-  .footer-copy { font-size: 0.8rem; }
+  .footer-mark { width: 32px; height: 32px; border: 1px solid rgba(192,97,78,0.5); display: flex; align-items: center; justify-content: center; font-family: 'Raleway', sans-serif; font-weight: 900; color: var(--terracota); font-size: 0.8rem; }
+  .footer-name { font-family: 'Raleway', sans-serif; color: white; font-weight: 800; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.1em; }
+  .footer-copy { font-size: 0.78rem; color: rgba(255,255,255,0.35); text-align: center; line-height: 1.8; }
+  .footer-right { font-size: 0.78rem; color: rgba(255,255,255,0.35); text-align: right; }
+  .footer-right a { color: rgba(255,255,255,0.3); text-decoration: none; }
+  .footer-right a:hover { color: var(--terracota); }
 
-  /* RESPONSIVE */
-  @media (max-width: 768px) {
-    nav { padding: 0 1.5rem; }
-    .nav-links { display: none; }
-    .hero-content { padding: 0 1.5rem 3rem; }
-    .hero-stats { display: none; }
-    .propiedades, .servicios, .proceso, .contacto, .valora { padding: 3.5rem 1.5rem; }
-    .prop-grid { grid-template-columns: 1fr; }
-    .proceso-grid { grid-template-columns: 1fr 1fr; }
-    .proceso-step::after { display: none; }
-    .contacto-grid { grid-template-columns: 1fr; gap: 2rem; }
+  @media (max-width: 900px) {
+    .hero-grid { grid-template-columns: 1fr; }
+    .hero-right { display: none; }
+    .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .footer-inner { flex-direction: column; text-align: center; }
+    .footer-right { text-align: center; }
     .form-row { grid-template-columns: 1fr; }
-    footer { flex-direction: column; text-align: center; }
   }
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
-  <a href="#" class="nav-logo">
-    <div class="nav-logo-icon">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+  <div class="nav-logo">
+    <div class="nav-logo-mark">T</div>
+    <div>
+      <div class="nav-logo-text">Templo Consulting</div>
+      <div class="nav-logo-sub">Inmobiliaria · Madrid</div>
     </div>
-    <span class="nav-logo-text">TEMPLO</span>
-  </a>
+  </div>
   <ul class="nav-links">
-    <li><a href="#propiedades">Propiedades</a></li>
-    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#por-que">Por qué elegirnos</a></li>
+    <li><a href="#tarifas">Tarifa plana</a></li>
     <li><a href="#proceso">Proceso</a></li>
-    <li><a href="#contacto" class="nav-cta">Contactar</a></li>
+    <li><a href="#contacto">Contacto</a></li>
   </ul>
+  <a href="#contacto" class="nav-cta">Tasación gratuita</a>
 </nav>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-content">
-    <div class="hero-label">Inmobiliaria Premium · Pozuelo de Alarcón</div>
-    <h1>Tu hogar ideal<br>en el Madrid<br><span>más exclusivo</span></h1>
-    <p class="hero-sub">Especialistas en la compraventa de propiedades de alto standing en Pozuelo, La Moraleja y el noroeste de Madrid.</p>
-    <div class="hero-btns">
-      <a href="#propiedades" class="btn-primary">Ver Propiedades</a>
-      <a href="#contacto" class="btn-outline-white">Valoración Gratuita</a>
+<div class="hero">
+  <div class="hero-grid">
+    <div class="hero-left">
+      <div class="hero-tag">
+        <svg viewBox="0 0 24 24" stroke="var(--terracota)" fill="none" stroke-width="2" width="12" height="12"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+        Inmobiliaria · Madrid · Tarifa plana
+      </div>
+      <h1>Vende tu piso.<br>Paga <span>solo lo justo.</span></h1>
+      <p>Templo Consulting revoluciona la intermediación inmobiliaria en Madrid con un modelo de tarifa plana transparente. Sin porcentajes, sin sorpresas. El ahorro es tuyo.</p>
+      <div class="hero-actions">
+        <a href="#contacto" class="btn-terracota">Tasación gratuita</a>
+        <a href="#tarifas" class="btn-outline-white">Ver tarifa plana</a>
+      </div>
+      <div class="hero-value-pill">
+        <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+        Ahorra hasta 15.000€ vs agencia tradicional en un piso de 400K
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-visual-grid">
+        <div class="hero-visual-top">
+          <svg viewBox="0 0 80 80"><path d="M40 5 L75 30 L75 75 L5 75 L5 30 Z" stroke-width="0.8"/><rect x="30" y="50" width="20" height="25" stroke-width="0.8"/><rect x="15" y="35" width="15" height="15" stroke-width="0.8"/><rect x="50" y="35" width="15" height="15" stroke-width="0.8"/></svg>
+        </div>
+        <div class="hero-visual-bottom">
+          <div class="hero-visual-cell">
+            <svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="25" stroke-width="0.8"/><path d="M20 30 L28 38 L42 22" stroke-width="1.2"/></svg>
+          </div>
+          <div class="hero-visual-cell">
+            <svg viewBox="0 0 60 60"><rect x="10" y="10" width="40" height="40" rx="2" stroke-width="0.8"/><path d="M20 25h20M20 30h15M20 35h18" stroke-width="0.8"/></svg>
+          </div>
+        </div>
+      </div>
+      <div class="hero-stats-bar">
+        <div class="hstat"><strong>+350</strong><span>Pisos vendidos</span></div>
+        <div class="hstat"><strong>8+</strong><span>Años en Madrid</span></div>
+        <div class="hstat"><strong>100%</strong><span>SSL seguro</span></div>
+      </div>
     </div>
   </div>
-  <div class="hero-stats">
-    <div class="hero-stat">
-      <div class="hero-stat-num">15+</div>
-      <div class="hero-stat-label">Años en el sector</div>
+</div>
+
+<section class="why" id="por-que">
+  <div class="why-header">
+    <div class="section-label">Por qué Templo</div>
+    <h2 class="section-title">Inmobiliaria diferente.<br>Resultados reales.</h2>
+    <p class="section-sub">Cansados del modelo de comisión opaca, creamos Templo Consulting para que vender un piso sea justo, transparente y eficiente.</p>
+  </div>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+      <h3>Tarifa plana — sin comisión</h3>
+      <p>Pagas una tarifa fija acordada desde el inicio. Sin porcentajes sobre el precio final. Tu ahorro se queda en tu bolsillo.</p>
     </div>
-    <div class="hero-stat">
-      <div class="hero-stat-num">320+</div>
-      <div class="hero-stat-label">Operaciones cerradas</div>
+    <div class="why-card">
+      <div class="why-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 12h8M8 8h8M8 16h5"/></svg></div>
+      <h3>Transparencia total</h3>
+      <p>Acceso en tiempo real al estado de tu expediente. Sabrás exactamente qué está pasando con la venta en cada momento.</p>
     </div>
-    <div class="hero-stat">
-      <div class="hero-stat-num">98%</div>
-      <div class="hero-stat-label">Satisfacción</div>
+    <div class="why-card">
+      <div class="why-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+      <h3>Difusión máxima</h3>
+      <p>Tu piso en Idealista, Fotocasa, Habitaclia y más de 20 portales simultáneamente. Reportaje fotográfico profesional incluido.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
+      <h3>Gestión jurídica completa</h3>
+      <p>Preparación de contrato, coordinación con notaría y entidades financieras. Todo el papeleo, sin que te preocupes de nada.</p>
     </div>
   </div>
 </section>
 
-<!-- PROPIEDADES DESTACADAS -->
-<section class="propiedades" id="propiedades">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-label-line">
-        <span class="section-label-text">Selección actual</span>
-      </div>
-      <h2 class="section-title">Propiedades destacadas</h2>
+<section class="flat-fee" id="tarifas">
+  <div class="flat-fee-inner">
+    <div class="flat-fee-header">
+      <div class="section-label" style="color:var(--terracota)">Precio transparente</div>
+      <h2 class="section-title" style="color:white">Tarifa plana. Sin sorpresas.</h2>
+      <p class="section-sub">En una agencia tradicional pagarías hasta el 5% del precio de venta. Con Templo, una tarifa plana y listo.</p>
     </div>
-    <div class="prop-grid">
-      <div class="prop-card">
-        <div class="prop-img">
-          <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=600&q=80&auto=format&fit=crop" alt="Chalet Pozuelo">
-          <span class="prop-badge">Venta</span>
-        </div>
-        <div class="prop-info">
-          <div class="prop-price">1.250.000 €</div>
-          <div class="prop-title">Chalet independiente con jardín y piscina</div>
-          <div class="prop-location">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            Pozuelo de Alarcón, Somosaguas
-          </div>
-          <div class="prop-features">
-            <span class="prop-feature"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg> 450 m²</span>
-            <span class="prop-feature"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 22V7a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v15"/></svg> 5 hab.</span>
-            <span class="prop-feature"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 22h14a2 2 0 0 0 2-2V7.5L14.5 2H6a2 2 0 0 0-2 2v4"/></svg> 4 baños</span>
-          </div>
-        </div>
+    <div class="pricing-cards">
+      <div class="pricing-card">
+        <div class="pricing-tier">Servicio básico</div>
+        <div class="pricing-name">Templo Básico</div>
+        <ul class="pricing-list">
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Valoración del inmueble</li>
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Publicación en 10 portales</li>
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Gestión de visitas</li>
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Contrato de arras</li>
+        </ul>
+        <a href="#contacto" class="pricing-cta">Consultar precio</a>
       </div>
-      <div class="prop-card">
-        <div class="prop-img">
-          <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80&auto=format&fit=crop" alt="Apartamento lujo">
-          <span class="prop-badge">Venta</span>
-        </div>
-        <div class="prop-info">
-          <div class="prop-price">680.000 €</div>
-          <div class="prop-title">Piso de lujo con terraza panorámica</div>
-          <div class="prop-location">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            Pozuelo, Zona Estación
-          </div>
-          <div class="prop-features">
-            <span class="prop-feature"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg> 185 m²</span>
-            <span class="prop-feature"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 22V7a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v15"/></svg> 3 hab.</span>
-            <span class="prop-feature"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 22h14a2 2 0 0 0 2-2V7.5L14.5 2H6a2 2 0 0 0-2 2v4"/></svg> 2 baños</span>
-          </div>
-        </div>
+      <div class="pricing-card featured">
+        <div class="pricing-tier">Servicio completo</div>
+        <div class="pricing-name">Templo Full</div>
+        <ul class="pricing-list">
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Todo lo del plan básico</li>
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Fotógrafo profesional</li>
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Tour virtual 360°</li>
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Más de 20 portales</li>
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Gestión notarial completa</li>
+        </ul>
+        <a href="#contacto" class="pricing-cta">Consultar precio</a>
       </div>
-      <div class="prop-card">
-        <div class="prop-img">
-          <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&q=80&auto=format&fit=crop" alt="Villa moderna">
-          <span class="prop-badge" style="background:var(--salvia)">Alquiler</span>
-        </div>
-        <div class="prop-info">
-          <div class="prop-price">4.500 €/mes</div>
-          <div class="prop-title">Villa moderna con domótica completa</div>
-          <div class="prop-location">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            La Moraleja, Alcobendas
-          </div>
-          <div class="prop-features">
-            <span class="prop-feature"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg> 380 m²</span>
-            <span class="prop-feature"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 22V7a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v15"/></svg> 4 hab.</span>
-            <span class="prop-feature"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 22h14a2 2 0 0 0 2-2V7.5L14.5 2H6a2 2 0 0 0-2 2v4"/></svg> 3 baños</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICIOS -->
-<section class="servicios" id="servicios">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-label-line">
-        <span class="section-label-text">Qué hacemos</span>
-      </div>
-      <h2 class="section-title" style="color:var(--blanco)">Servicios para compradores y vendedores</h2>
-    </div>
-    <div class="servicios-grid">
-      <div class="servicio-item">
-        <div class="servicio-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        </div>
-        <h3 class="servicio-title">Búsqueda de propiedades</h3>
-        <p class="servicio-desc">Encontramos el inmueble que se adapta exactamente a tus necesidades y presupuesto en todo el noroeste de Madrid.</p>
-      </div>
-      <div class="servicio-item">
-        <div class="servicio-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-        </div>
-        <h3 class="servicio-title">Valoración gratuita</h3>
-        <p class="servicio-desc">Tasación profesional de tu propiedad con análisis de mercado actualizado para maximizar el precio de venta.</p>
-      </div>
-      <div class="servicio-item">
-        <div class="servicio-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-        </div>
-        <h3 class="servicio-title">Gestión documental</h3>
-        <p class="servicio-desc">Tramitamos toda la documentación: contratos, escrituras, impuestos y registro. Sin sorpresas ni papeleo.</p>
-      </div>
-      <div class="servicio-item">
-        <div class="servicio-icon">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
-        </div>
-        <h3 class="servicio-title">Gestión patrimonial</h3>
-        <p class="servicio-desc">Asesoramiento integral para inversores: carteras de inmuebles, rentabilidad y estrategia de desinversión.</p>
+      <div class="pricing-card">
+        <div class="pricing-tier">Inversores y carteras</div>
+        <div class="pricing-name">Templo Pro</div>
+        <ul class="pricing-list">
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Gestión de múltiples activos</li>
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Asesoramiento fiscal</li>
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Due diligence inmobiliaria</li>
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Gestor personal asignado</li>
+        </ul>
+        <a href="#contacto" class="pricing-cta">Consultar precio</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PROCESO -->
-<section class="proceso" id="proceso">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-label-line">
-        <span class="section-label-text">Cómo trabajamos</span>
+<section class="process" id="proceso">
+  <div class="process-header">
+    <div class="section-label">Proceso</div>
+    <h2 class="section-title">Cómo vendemos tu piso</h2>
+    <p class="section-sub">Un proceso claro, con hitos definidos y comunicación constante. Así es como funciona Templo Consulting.</p>
+  </div>
+  <div class="process-timeline">
+    <div class="pt-item">
+      <div class="pt-num">01</div>
+      <div class="pt-content">
+        <h4>Tasación y estrategia de precio</h4>
+        <p>Analizamos el mercado actual en tu zona, estudiamos operaciones comparables y definimos el precio óptimo para maximizar el valor sin ralentizar la venta.</p>
+        <span class="pt-tag">→ Gratis y sin compromiso</span>
       </div>
-      <h2 class="section-title">El camino hasta las llaves</h2>
     </div>
-    <div class="proceso-grid">
-      <div class="proceso-step">
-        <div class="paso-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.07 12 19.79 19.79 0 0 1 1 3.18 2 2 0 0 1 3 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 5.55 5.55l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        </div>
-        <div class="paso-num">Paso 01</div>
-        <h4 class="paso-title">Consulta inicial</h4>
-        <p class="paso-desc">Analizamos tus necesidades y definimos el perfil de propiedad ideal o las condiciones de venta.</p>
+    <div class="pt-item">
+      <div class="pt-num">02</div>
+      <div class="pt-content">
+        <h4>Reportaje fotográfico y publicación</h4>
+        <p>Fotógrafo profesional, redacción del anuncio y publicación simultánea en todos los portales. Tu piso, a máxima visibilidad desde el primer día.</p>
+        <span class="pt-tag">→ Mismo día de firma del encargo</span>
       </div>
-      <div class="proceso-step">
-        <div class="paso-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        </div>
-        <div class="paso-num">Paso 02</div>
-        <h4 class="paso-title">Selección y visitas</h4>
-        <p class="paso-desc">Presentamos opciones personalizadas y organizamos visitas en horario flexible, incluso fines de semana.</p>
+    </div>
+    <div class="pt-item">
+      <div class="pt-num">03</div>
+      <div class="pt-content">
+        <h4>Gestión de visitas y negociación</h4>
+        <p>Coordinamos todas las visitas y filtramos compradores cualificados. Negociamos en tu nombre para obtener el mejor precio posible.</p>
+        <span class="pt-tag">→ Disponibilidad 7 días a la semana</span>
       </div>
-      <div class="proceso-step">
-        <div class="paso-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-        </div>
-        <div class="paso-num">Paso 03</div>
-        <h4 class="paso-title">Negociación y oferta</h4>
-        <p class="paso-desc">Negociamos en tu nombre para obtener las mejores condiciones. Reserva y contrato con total seguridad.</p>
-      </div>
-      <div class="proceso-step">
-        <div class="paso-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        </div>
-        <div class="paso-num">Paso 04</div>
-        <h4 class="paso-title">Entrega de llaves</h4>
-        <p class="paso-desc">Firma notarial, registro y entrega. Te acompañamos hasta que el inmueble es tuyo.</p>
+    </div>
+    <div class="pt-item">
+      <div class="pt-num">04</div>
+      <div class="pt-content">
+        <h4>Cierre notarial y entrega de llaves</h4>
+        <p>Gestionamos toda la documentación, coordinamos con el banco del comprador y acompañamos hasta la firma en notaría. Cobras tu precio limpio.</p>
+        <span class="pt-tag">→ Tiempo medio: 45 días desde publicación</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CTA VALORACIÓN -->
-<section class="valora">
-  <h2>¿Cuánto vale tu propiedad?</h2>
-  <p>Descúbrelo con nuestra valoración gratuita. Sin compromiso, con datos reales del mercado.</p>
-  <a href="#contacto" class="btn-white">Solicitar Valoración Gratuita</a>
-</section>
-
-<!-- CONTACTO -->
-<section class="contacto" id="contacto">
-  <div class="container">
-    <div class="contacto-grid">
-      <div>
-        <div class="section-label-line" style="margin-bottom:0.5rem">
-          <span class="section-label-text">Contacto</span>
-        </div>
-        <h2 class="section-title" style="margin-bottom:2rem">Hablemos de tu operación</h2>
-        <div class="info-piece">
-          <div class="info-piece-label">Oficina principal</div>
-          <div class="info-piece-value">Pozuelo de Alarcón, Madrid</div>
-        </div>
-        <div class="info-piece">
-          <div class="info-piece-label">Teléfono</div>
-          <div class="info-piece-value">+34 910 000 000</div>
-        </div>
-        <div class="info-piece">
-          <div class="info-piece-label">Email</div>
-          <div class="info-piece-value">info@temploconsulting.com</div>
-        </div>
-        <div class="info-piece">
-          <div class="info-piece-label">Horario</div>
-          <div class="info-piece-value">Lun–Vie 9:30–20:00 · Sáb 10:00–14:00</div>
-        </div>
+<section class="testimonials">
+  <div class="testimonials-header">
+    <div class="section-label">Clientes</div>
+    <h2 class="section-title">Operaciones reales. Clientes reales.</h2>
+    <p class="section-sub">Lo que dicen quienes ya vendieron con Templo Consulting.</p>
+  </div>
+  <div class="testimonials-grid">
+    <div class="t-card">
+      <div class="t-stars">
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
       </div>
-      <div>
-        <form onsubmit="return false;">
-          <div class="form-row">
-            <div class="form-input-group">
-              <label>Nombre</label>
-              <input type="text" placeholder="Tu nombre">
-            </div>
-            <div class="form-input-group">
-              <label>Teléfono</label>
-              <input type="tel" placeholder="+34 000 000 000">
-            </div>
-          </div>
-          <div class="form-input-group">
-            <label>Email</label>
-            <input type="email" placeholder="tu@email.com">
-          </div>
-          <div class="form-input-group">
-            <label>¿Qué buscas?</label>
-            <select>
-              <option value="">Tipo de operación</option>
-              <option>Comprar propiedad</option>
-              <option>Vender mi propiedad</option>
-              <option>Alquilar propiedad</option>
-              <option>Valoración gratuita</option>
-              <option>Gestión patrimonial</option>
-            </select>
-          </div>
-          <div class="form-input-group">
-            <label>Presupuesto aproximado</label>
-            <select>
-              <option value="">Seleccionar rango</option>
-              <option>Hasta 400.000 €</option>
-              <option>400.000 – 700.000 €</option>
-              <option>700.000 – 1.200.000 €</option>
-              <option>Más de 1.200.000 €</option>
-            </select>
-          </div>
-          <div class="form-input-group">
-            <label>Mensaje</label>
-            <textarea placeholder="Cuéntanos más sobre lo que buscas..."></textarea>
-          </div>
-          <button type="submit" class="btn-form-submit">Enviar Consulta</button>
-        </form>
+      <p>"Vendimos el piso de mis padres en Chamartín en 38 días. Con una agencia tradicional nos habrían cobrado 18.000€. Con Templo pagamos mucho menos y el servicio fue excelente."</p>
+      <div class="t-name">Javier M.</div>
+      <div class="t-detail">Venta piso 390.000€ · Chamartín</div>
+    </div>
+    <div class="t-card">
+      <div class="t-stars">
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
       </div>
+      <p>"Como inversora, he vendido 3 pisos con Templo. La transparencia en el proceso y el ahorro de costes son increíbles. No volveré a una agencia tradicional."</p>
+      <div class="t-name">Ana R.</div>
+      <div class="t-detail">Inversora inmobiliaria · Madrid</div>
+    </div>
+    <div class="t-card">
+      <div class="t-stars">
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      </div>
+      <p>"Profesionales, rápidos y muy claros con los precios. Vendimos en tiempo récord con el mejor precio posible. El tour virtual atrajo muchísimas visitas cualificadas."</p>
+      <div class="t-name">Carlos P.</div>
+      <div class="t-detail">Venta chalet · Las Rozas</div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
+<section class="contact" id="contacto">
+  <div class="contact-grid">
+    <div class="contact-info">
+      <div class="section-label">Contacto</div>
+      <h2 class="section-title">Empieza con una tasación gratuita</h2>
+      <p>Cuéntanos sobre tu inmueble. En menos de 24 horas recibirás una valoración del mercado actual y presupuesto detallado de nuestros servicios.</p>
+      <div class="contact-details">
+        <div class="ci">
+          <div class="ci-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div class="ci-text"><strong>Oficina</strong><span>Calle Velázquez 28, 3ª Planta · Madrid 28001</span></div>
+        </div>
+        <div class="ci">
+          <div class="ci-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.42 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.06 6.06l1.12-1.12a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div class="ci-text"><strong>Teléfono</strong><span>+34 91 XXX XX XX</span></div>
+        </div>
+        <div class="ci">
+          <div class="ci-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div class="ci-text"><strong>Email</strong><span>info@temploconsulting.com</span></div>
+        </div>
+      </div>
+      <div class="ssl-badge">
+        <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        <div>
+          <span>Conexión segura SSL certificada</span>
+          <span class="ssl-detail">Tus datos están protegidos · Certificado HTTPS activo</span>
+        </div>
+      </div>
+    </div>
+    <div class="contact-form">
+      <div class="form-title">Tasación gratuita de tu inmueble</div>
+      <div class="form-sub">Valoración de mercado + presupuesto en menos de 24 horas</div>
+      <form>
+        <div class="form-row">
+          <div class="form-group"><label>Nombre</label><input type="text" placeholder="Tu nombre"></div>
+          <div class="form-group"><label>Teléfono</label><input type="tel" placeholder="+34 6XX XXX XXX"></div>
+        </div>
+        <div class="form-group"><label>Email</label><input type="email" placeholder="tu@email.com"></div>
+        <div class="form-group">
+          <label>Tipo de inmueble</label>
+          <select>
+            <option>Piso en bloque</option>
+            <option>Chalet / Adosado</option>
+            <option>Local comercial</option>
+            <option>Oficina</option>
+            <option>Garaje / Trastero</option>
+            <option>Solar / Parcela</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Dirección aproximada</label><input type="text" placeholder="Barrio o calle"></div>
+          <div class="form-group"><label>Superficie (m²)</label><input type="number" placeholder="90"></div>
+        </div>
+        <div class="form-group">
+          <label>Mensaje (opcional)</label>
+          <textarea placeholder="¿Urgencia, situación especial, segunda vivienda...?"></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Solicitar tasación gratuita</button>
+      </form>
+    </div>
+  </div>
+</section>
+
 <footer>
-  <span class="footer-logo">TEMPLO CONSULTING</span>
-  <span class="footer-copy">© 2026 Templo Consulting · Inmobiliaria Premium · Pozuelo de Alarcón, Madrid</span>
+  <div class="footer-inner">
+    <div class="footer-logo-area">
+      <div class="footer-logo-mark-sm">
+        <div class="footer-mark">T</div>
+        <div class="footer-name">Templo Consulting</div>
+      </div>
+    </div>
+    <div class="footer-copy">© 2026 Templo Consulting · Inmobiliaria · Madrid<br>Todos los derechos reservados</div>
+    <div class="footer-right">
+      <a href="#">Aviso Legal</a> · <a href="#">Privacidad</a><br>
+      <span style="color:rgba(192,97,78,0.5); font-size:0.75rem; margin-top:4px; display:block;">Demo profesional — rediseño desde 1.500€</span>
+    </div>
+  </div>
 </footer>
 
 </body>
